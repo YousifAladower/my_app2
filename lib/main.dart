@@ -34,6 +34,10 @@ class _MyAppState extends State <MyApp>
                   labelStyle: TextStyle(fontFamily: AutofillHints.transactionAmount),
                   hintText: "UserName",
                   icon: Icon(Icons.person_2_outlined),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 5,color: Colors.greenAccent),
+                    borderRadius: BorderRadius.circular(60.0)
+                  )
                 )
             )
             ),
@@ -43,7 +47,7 @@ class _MyAppState extends State <MyApp>
                   labelText: "Email",
                   labelStyle: TextStyle(fontFamily: AutofillHints.transactionAmount),
                   hintText: "enter Email",
-                  icon: Icon(Icons.email_outlined),
+                  prefixIcon: const Icon(Icons.email_outlined),
                 ),
                 keyboardType: TextInputType.emailAddress,
             )
