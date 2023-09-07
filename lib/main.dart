@@ -1,52 +1,30 @@
-
 import 'package:flutter/material.dart';
-void main(){
-   return runApp(MyApp());
+import 'package:my_app2/question.dart';
+
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
 }
 
-class MyApp extends StatelessWidget{
+class _MyAppState extends State<MyApp> {
+
+final _questions = [
+  'what \'s favorite color ?',
+  'what \'s favorite anamels ?',
+  'what \'s favorite place ?'
+];
   @override
   Widget build(BuildContext context) {
-  return MaterialApp(
-    title: "Ttit bar",
-    theme:ThemeData(
-      primarySwatch : Colors.blue,
-    ),
-    home: MyHomePage(),
-  );
-  }
-
-
-}
-
-class MyHomePage extends StatefulWidget{
-  @override
-  State<StatefulWidget> createState() {
-    return _MyHomePageState();
-  }
-  
-}
-class _MyHomePageState extends State <MyHomePage>
-{
-
-  @override
-  Widget build(BuildContext context) {
-    return  Scaffold(
-
-     appBar:AppBar(title:Text('text appBare')),
-        body:Container(
-          alignment: Alignment.center,
-         child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Container(width: 400,height: 400,color: Colors.greenAccent),
-            Container(width: 200,height: 200,color: Colors.blueAccent),
-            Container(width: 100,height: 100,color: Colors.yellowAccent),
-          ],
-         ),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title:  Text("Quiz APP"),
         ),
-        );
-   
+        body: Container(
+         // child:Questions(_questions[1])
 
+        ),
+      ),
+    );
   }
 }
