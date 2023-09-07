@@ -35,7 +35,15 @@ class _MyHomePageState extends State <MyHomePage>
 
      appBar:AppBar(title:Text('text appBare')),
         body:Container(
-         
+          alignment: Alignment.center,
+         child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(width: 400,height: 400,color: Colors.greenAccent),
+            Container(width: 200,height: 200,color: Colors.blueAccent),
+            Container(width: 100,height: 100,color: Colors.yellowAccent),
+          ],
+         ),
         ),
         );
    

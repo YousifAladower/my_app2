@@ -1,4 +1,4 @@
-
+ 
 import 'package:flutter/material.dart';
 void main(){
    return runApp(MyApp());
@@ -10,7 +10,7 @@ class MyApp extends StatefulWidget{
     return _MyAppState();
   }
   
-}
+} 
 class _MyAppState extends State <MyApp>
 {
     var str="";
