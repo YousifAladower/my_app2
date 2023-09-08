@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_app2/question.dart';
 
+void main(){
+   return runApp(MyApp());
+}
 class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
@@ -21,6 +24,11 @@ final _questions = [
           title:  Text("Quiz APP"),
         ),
         body: Container(
+          child: Column(
+            children: [
+             Questions(_questions[0])
+            ],
+          ),
          // child:Questions(_questions[1])
 
         ),
